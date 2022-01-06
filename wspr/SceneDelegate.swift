@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  william
+//  wspr
 //
 //  Created by Pinto Junior, William James on 06/01/22.
 //

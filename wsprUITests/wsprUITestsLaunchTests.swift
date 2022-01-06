@@ -1,13 +1,13 @@
 //
-//  williamUITestsLaunchTests.swift
-//  williamUITests
+//  wsprUITestsLaunchTests.swift
+//  wsprUITests
 //
 //  Created by Pinto Junior, William James on 06/01/22.
 //
 
 import XCTest
 
-class williamUITestsLaunchTests: XCTestCase {
+class wsprUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
