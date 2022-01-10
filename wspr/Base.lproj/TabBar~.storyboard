@@ -205,7 +205,6 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Hgo-6q-GfD">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6xw-4e-GyW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController id="7o2-FS-4ee" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="BKL-h7-9aR"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6En-2X-rHf">
@@ -220,6 +219,7 @@
                         <segue destination="7OT-CX-RrP" kind="relationship" relationship="viewControllers" id="jfe-3c-afR"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6xw-4e-GyW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2832" y="249"/>
         </scene>
@@ -1096,9 +1096,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XeX-kS-V33">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.99215686270000003" green="0.43921568630000002" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
-                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="bGf-VN-EQ8" kind="relationship" relationship="rootViewController" id="rjt-Qe-xOx"/>
