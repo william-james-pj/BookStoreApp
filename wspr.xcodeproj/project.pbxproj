@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E05D5675278DFE4700715BBB /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D5674278DFE4700715BBB /* StateController.swift */; };
+		E05D5677278E001300715BBB /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D5676278E001300715BBB /* SignUpController.swift */; };
 		E0FCFD92278753AD00628AEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCFD91278753AD00628AEB /* AppDelegate.swift */; };
 		E0FCFD94278753AD00628AEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCFD93278753AD00628AEB /* SceneDelegate.swift */; };
 		E0FCFD96278753AD00628AEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCFD95278753AD00628AEB /* ViewController.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E05D5674278DFE4700715BBB /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StateController.swift; path = Controllers/StateController.swift; sourceTree = "<group>"; };
+		E05D5676278E001300715BBB /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		E0FCFD8E278753AD00628AEB /* wspr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wspr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0FCFD91278753AD00628AEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0FCFD93278753AD00628AEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,13 +80,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E0031058278C924700F12CEF /* Layout */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Layout;
-			sourceTree = "<group>";
-		};
 		E0FCFD85278753AD00628AEB = {
 			isa = PBXGroup;
 			children = (
@@ -106,11 +103,12 @@
 		E0FCFD90278753AD00628AEB /* wspr */ = {
 			isa = PBXGroup;
 			children = (
-				E0031058278C924700F12CEF /* Layout */,
 				E0FCFD91278753AD00628AEB /* AppDelegate.swift */,
 				E0FCFD93278753AD00628AEB /* SceneDelegate.swift */,
 				E0FCFD95278753AD00628AEB /* ViewController.swift */,
 				E0FCFD97278753AD00628AEB /* Main.storyboard */,
+				E05D5676278E001300715BBB /* SignUpController.swift */,
+				E05D5674278DFE4700715BBB /* StateController.swift */,
 				E0FCFD9A278753B000628AEB /* Assets.xcassets */,
 				E0FCFD9C278753B000628AEB /* LaunchScreen.storyboard */,
 				E0FCFD9F278753B000628AEB /* Info.plist */,
@@ -266,7 +264,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E05D5677278E001300715BBB /* SignUpController.swift in Sources */,
 				E0FCFD96278753AD00628AEB /* ViewController.swift in Sources */,
+				E05D5675278DFE4700715BBB /* StateController.swift in Sources */,
 				E0FCFD92278753AD00628AEB /* AppDelegate.swift in Sources */,
 				E0FCFD94278753AD00628AEB /* SceneDelegate.swift in Sources */,
 			);
