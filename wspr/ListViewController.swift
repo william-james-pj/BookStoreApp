@@ -1,5 +1,5 @@
 //
-//  CityViewController.swift
+//  ListViewController.swift
 //  wspr
 //
 //  Created by Pinto Junior, William James on 12/01/22.
@@ -7,15 +7,15 @@
 
 import UIKit
 
-protocol CityViewControllerDelegate {
-    func updateCity(_ city: String)
+protocol ListViewControllerDelegate {
+    func updateItem(_ item: String)
 }
 
-class CityViewController: UIViewController {
+class ListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
-    var delegate: CityViewControllerDelegate?
-    var cityModel: CityModel?
+    var delegate: ListViewControllerDelegate?
+    var listModel: ListModel?
     
     let cellReuseIdentifier = "cell"
     var listView : [String] = []
@@ -23,8 +23,8 @@ class CityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let cityModel = cityModel,
-        let citys = cityModel.citys,
+        guard let listModel = listModel,
+        let citys = listModel.items,
         citys.count > 0 else {
             return
         }
@@ -39,22 +39,22 @@ class CityViewController: UIViewController {
         tableView.dataSource = self
     }
     
-    fileprivate func setCity(_ selectedCity: String) {
+    fileprivate func setList(_ selectedItem: String) {
         guard let delegate = delegate else {
             return
         }
         navigationController?.popViewController(animated: true)
-        delegate.updateCity(selectedCity)
+        delegate.updateItem(selectedItem)
     }
 }
 
-extension CityViewController: UITableViewDelegate {
+extension ListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        setCity(listView[indexPath.row])
+        setList(listView[indexPath.row])
     }
 }
 
-extension CityViewController: UITableViewDataSource {
+extension ListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listView.count
     }
@@ -72,3 +72,4 @@ extension CityViewController: UITableViewDataSource {
     }
     
 }
+
