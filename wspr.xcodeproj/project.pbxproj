@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E01A9812278F0FDC00FBE1B8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01A9811278F0FDC00FBE1B8 /* LogInViewController.swift */; };
+		E01A9816278F3ECC00FBE1B8 /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01A9815278F3ECC00FBE1B8 /* CityViewController.swift */; };
 		E05D5675278DFE4700715BBB /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D5674278DFE4700715BBB /* StateController.swift */; };
 		E05D5677278E001300715BBB /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05D5676278E001300715BBB /* SignUpController.swift */; };
 		E0FCFD92278753AD00628AEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCFD91278753AD00628AEB /* AppDelegate.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E01A9811278F0FDC00FBE1B8 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		E01A9815278F3ECC00FBE1B8 /* CityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
 		E05D5674278DFE4700715BBB /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StateController.swift; path = Controllers/StateController.swift; sourceTree = "<group>"; };
 		E05D5676278E001300715BBB /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		E0FCFD8E278753AD00628AEB /* wspr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wspr.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +111,8 @@
 				E0FCFD93278753AD00628AEB /* SceneDelegate.swift */,
 				E0FCFD95278753AD00628AEB /* ViewController.swift */,
 				E0FCFD97278753AD00628AEB /* Main.storyboard */,
+				E01A9815278F3ECC00FBE1B8 /* CityViewController.swift */,
+				E01A9811278F0FDC00FBE1B8 /* LogInViewController.swift */,
 				E05D5676278E001300715BBB /* SignUpController.swift */,
 				E05D5674278DFE4700715BBB /* StateController.swift */,
 				E0FCFD9A278753B000628AEB /* Assets.xcassets */,
@@ -266,9 +272,11 @@
 			files = (
 				E05D5677278E001300715BBB /* SignUpController.swift in Sources */,
 				E0FCFD96278753AD00628AEB /* ViewController.swift in Sources */,
+				E01A9812278F0FDC00FBE1B8 /* LogInViewController.swift in Sources */,
 				E05D5675278DFE4700715BBB /* StateController.swift in Sources */,
 				E0FCFD92278753AD00628AEB /* AppDelegate.swift in Sources */,
 				E0FCFD94278753AD00628AEB /* SceneDelegate.swift in Sources */,
+				E01A9816278F3ECC00FBE1B8 /* CityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
