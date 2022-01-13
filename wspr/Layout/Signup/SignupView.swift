@@ -1,25 +1,35 @@
 //
-//  SignUpController.swift
+//  SignupView.swift
 //  wspr
 //
-//  Created by Pinto Junior, William James on 11/01/22.
+//  Created by Pinto Junior, William James on 13/01/22.
 //
 
 import UIKit
 
-class SignUpController: UIViewController {
+class SignupView: UIView {
+    @IBOutlet var viewBase: UIView!
     @IBOutlet weak var textFieldState: UITextField!
     @IBOutlet weak var textFieldCity: UITextField!
     
-    var inputId = 0
+    override init(frame: CGRect) {
+        super.init(frame: frame )
+        commonInit()
+    }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    required init?(coder: NSCoder) {
+        super.init(coder: coder )
+        commonInit()
+    }
+    
+    private func commonInit() {
+        Bundle(for: type(of: self)).loadNibNamed("SignupView", owner: self, options: nil)
+        addSubview(viewBase)
+        viewBase.frame = bounds
+        viewBase.autoresizingMask = [.flexibleWidth, .flexibleHeight ]
     }
     
     @IBAction func buttonSelect(_ sender: UIButton) {
-        inputId = 1
-        
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         guard let listVC = storyboard.instantiateViewController(withIdentifier: "ListViewController") as? ListViewController else{
             return
@@ -33,12 +43,10 @@ class SignUpController: UIViewController {
         listVC.listView = listModel
         
         listVC.delegate = self
-        self.navigationController?.pushViewController(listVC, animated: true)
+//        self.navigationController?.pushViewController(listVC, animated: true)
     }
     
     @IBAction func buttonCitySelect(_ sender: UIButton) {
-        inputId = 2
-        
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         guard let listVC = storyboard.instantiateViewController(withIdentifier: "ListViewController") as? ListViewController else{
             return
@@ -52,11 +60,11 @@ class SignUpController: UIViewController {
         listVC.listView = listModel
         
         listVC.delegate = self
-        self.navigationController?.pushViewController(listVC, animated: true)
+//        self.navigationController?.pushViewController(listVC, animated: true)
     }
 }
 
-extension SignUpController: ListViewControllerDelegate {
+extension SignupView: ListViewControllerDelegate {
     func updateItem(_ item: ItemModel) {
         switch item.type {
         case .typeState:
@@ -68,4 +76,3 @@ extension SignUpController: ListViewControllerDelegate {
         }
     }
 }
-
