@@ -2,7 +2,7 @@
 //  LogInViewController.swift
 //  wspr
 //
-//  Created by Pinto Junior, William James on 12/01/22.
+//  Created by Pinto Junior, William James on 14/01/22.
 //
 
 import UIKit
@@ -13,14 +13,12 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTextField()
     }
     
     fileprivate func setupTextField() {
         textFieldEmail.delegate = self
         textFieldPassword.delegate = self
     }
-    
 }
 
 extension LogInViewController: UITextFieldDelegate {
