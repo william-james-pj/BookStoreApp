@@ -11,6 +11,10 @@
 		E0017F422791DFD900635EF7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0017F412791DFD900635EF7 /* SignUpViewController.swift */; };
 		E0017F442791EB7000635EF7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0017F432791EB7000635EF7 /* HomeViewController.swift */; };
 		E01A981B278F93B900FBE1B8 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01A981A278F93B900FBE1B8 /* ListViewController.swift */; };
+		E03967052795AB6400D2B814 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03967042795AB6400D2B814 /* Network.swift */; };
+		E03967072795AC0300D2B814 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03967062795AC0300D2B814 /* Endpoint.swift */; };
+		E03967092795B11100D2B814 /* StateDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03967082795B11100D2B814 /* StateDTO.swift */; };
+		E039670B2795CA6B00D2B814 /* CityDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E039670A2795CA6B00D2B814 /* CityDTO.swift */; };
 		E0ABEF102791F7CA00575A34 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ABEF0E2791F7CA00575A34 /* CustomCollectionViewCell.swift */; };
 		E0ABEF112791F7CA00575A34 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0ABEF0F2791F7CA00575A34 /* CustomCollectionViewCell.xib */; };
 		E0CC0FA827908B870014CB61 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CC0FA627908B870014CB61 /* CustomTableViewCell.swift */; };
@@ -49,6 +53,10 @@
 		E0017F412791DFD900635EF7 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		E0017F432791EB7000635EF7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E01A981A278F93B900FBE1B8 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		E03967042795AB6400D2B814 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		E03967062795AC0300D2B814 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		E03967082795B11100D2B814 /* StateDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDTO.swift; sourceTree = "<group>"; };
+		E039670A2795CA6B00D2B814 /* CityDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDTO.swift; sourceTree = "<group>"; };
 		E0ABEF0E2791F7CA00575A34 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		E0ABEF0F2791F7CA00575A34 /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
 		E0CC0FA627908B870014CB61 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -98,6 +106,10 @@
 			isa = PBXGroup;
 			children = (
 				E0CC0FAA2790AB250014CB61 /* ItemModel.swift */,
+				E03967042795AB6400D2B814 /* Network.swift */,
+				E03967062795AC0300D2B814 /* Endpoint.swift */,
+				E03967082795B11100D2B814 /* StateDTO.swift */,
+				E039670A2795CA6B00D2B814 /* CityDTO.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -308,10 +320,14 @@
 				E0CC0FAB2790AB250014CB61 /* ItemModel.swift in Sources */,
 				E0CC0FA827908B870014CB61 /* CustomTableViewCell.swift in Sources */,
 				E0FCFD96278753AD00628AEB /* ViewController.swift in Sources */,
+				E03967052795AB6400D2B814 /* Network.swift in Sources */,
 				E01A981B278F93B900FBE1B8 /* ListViewController.swift in Sources */,
 				E0017F442791EB7000635EF7 /* HomeViewController.swift in Sources */,
 				E0FCFD92278753AD00628AEB /* AppDelegate.swift in Sources */,
 				E0FCFD94278753AD00628AEB /* SceneDelegate.swift in Sources */,
+				E039670B2795CA6B00D2B814 /* CityDTO.swift in Sources */,
+				E03967072795AC0300D2B814 /* Endpoint.swift in Sources */,
+				E03967092795B11100D2B814 /* StateDTO.swift in Sources */,
 				E0017F402791DF2500635EF7 /* LogInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

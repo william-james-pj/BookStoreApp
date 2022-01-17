@@ -14,6 +14,7 @@ enum ItemType {
 }
 
 class ItemModel {
+    var id: Int?
     var title: String = ""
     var color: UIColor?
     var type: ItemType = .typeState
@@ -22,6 +23,13 @@ class ItemModel {
     }
     
     init(title: String, color: UIColor? = .green, type: ItemType ){
+        self.title = title
+        self.color = color
+        self.type = type
+    }
+    
+    init(id: Int, title: String, color: UIColor? = .green, type: ItemType ){
+        self.id = id
         self.title = title
         self.color = color
         self.type = type
