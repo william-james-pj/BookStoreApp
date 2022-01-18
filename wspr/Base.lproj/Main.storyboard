@@ -433,6 +433,9 @@
                                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
                                                             <color key="baseForegroundColor" red="0.99215686270000003" green="0.43921568630000002" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="buttonLogInPresse:" destination="Jv3-IP-Vl0" eventType="touchUpInside" id="B9R-pl-g6n"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>

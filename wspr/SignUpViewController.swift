@@ -25,6 +25,10 @@ class SignUpViewController: UIViewController {
         showLoading(false)
     }
     
+    @IBAction func buttonLogInPresse(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func buttonSelect(_ sender: UIButton) {
         getStates()
     }
@@ -61,7 +65,7 @@ class SignUpViewController: UIViewController {
     
     fileprivate func getStates() {
         showLoading(true)
-        Network.getStates { [weak self] result in
+        NetworkMoya.getStates { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let response):
@@ -89,7 +93,7 @@ class SignUpViewController: UIViewController {
     
     fileprivate func getCities(_ stateId: Int) {
         showLoading(true)
-        Network.getCity(stateId: stateId) { [weak self] result in
+        NetworkMoya.getCity(stateId) { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let response):
@@ -121,7 +125,7 @@ extension SignUpViewController: ListViewControllerDelegate {
         switch item.type {
         case .typeState:
             textFieldState.text = item.title
-            
+            textFieldCity.text = ""
             if let stateId = item.id {
                 stateSelected = stateId
             }
