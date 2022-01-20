@@ -10,7 +10,7 @@ import Foundation
 class Network {
     fileprivate static var session = URLSession.shared
     
-    static func getStates(completion: @escaping(Result<[StateDTO], Error>) -> Void) {
+    static func getStates(completion: @escaping(Result<[State], Error>) -> Void) {
         guard let url = getURL(EndPoint.UFS.states) else { return }
         
         let dataTask = session.dataTask(with: url) { response, urlResponse, error in
@@ -22,7 +22,7 @@ class Network {
             guard let jsonData = response else { return }
             do {
                 let decoder = JSONDecoder()
-                let statesResponse = try decoder.decode([StateDTO].self, from: jsonData)
+                let statesResponse = try decoder.decode([State].self, from: jsonData)
                 completion(.success(statesResponse))
             } catch let error {
                 completion(.failure(error))
@@ -31,7 +31,7 @@ class Network {
         dataTask.resume()
     }
     
-    static func getCity(stateId: Int, completion: @escaping(Result<[CityDTO], Error>) -> Void) {
+    static func getCity(stateId: Int, completion: @escaping(Result<[City], Error>) -> Void) {
         guard let url = getURL(EndPoint.Cities.base + "/\(stateId)" + EndPoint.Cities.cities) else { return }
         
         let dataTask = session.dataTask(with: url) { response, urlResponse, error in
@@ -43,7 +43,7 @@ class Network {
             guard let jsonData = response else { return }
             do {
                 let decoder = JSONDecoder()
-                let statesResponse = try decoder.decode([CityDTO].self, from: jsonData)
+                let statesResponse = try decoder.decode([City].self, from: jsonData)
                 completion(.success(statesResponse))
             } catch let error {
                 completion(.failure(error))

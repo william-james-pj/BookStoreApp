@@ -7,7 +7,7 @@
 
 import Foundation
 
-class StateDTO: Codable {
+class State: Codable {
     let id: Int?
     let name: String?
     let initials: String?

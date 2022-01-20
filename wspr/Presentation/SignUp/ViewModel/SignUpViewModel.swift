@@ -59,7 +59,7 @@ class SignUpViewModel {
         }
     }
     
-    func buildListStates(_ listDTO: [StateDTO]) {
+    func buildListStates(_ listDTO: [State]) {
         let list = listDTO.map({state in
             return ItemModel(id: state.id ?? 0, title: state.name ?? "", type: .typeState)
         })
@@ -77,7 +77,7 @@ class SignUpViewModel {
         }
     }
     
-    func buildListCities(_ listDTO: [CityDTO]) {
+    func buildListCities(_ listDTO: [City]) {
         let list = listDTO.map({state in
             return ItemModel(title: state.name ?? "", type: .typeCity)
         })

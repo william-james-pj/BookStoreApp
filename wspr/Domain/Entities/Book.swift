@@ -7,7 +7,7 @@
 
 import Foundation
 
-class BookModel {
+class Book {
     var title: String
     var price: Double
     

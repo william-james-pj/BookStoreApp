@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CategroiesModel {
+class Category {
     var title: String
     
     init(){
