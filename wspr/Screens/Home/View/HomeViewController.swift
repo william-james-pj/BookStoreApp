@@ -15,6 +15,7 @@ class HomeViewController: UIViewController {
     let resuseIdentifier = "CollectionCell"
     let resuseIdentifierHorizontal = "CollectionCellHorizontal"
     var categroies: [CategroiesModel] = []
+    var books: [BookModel] = []
     fileprivate var viewModel: HomeViewModel = {
         return HomeViewModel()
     }()
@@ -27,6 +28,7 @@ class HomeViewController: UIViewController {
     
     fileprivate func setupData() {
         categroies = viewModel.getCategroies()
+        books = viewModel.getBooks()
     }
     
     fileprivate func setupCollection() {
@@ -57,7 +59,7 @@ extension HomeViewController: UICollectionViewDelegate {
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if  collectionView == collectionViewVertical {
-            return 10
+            return viewModel.getBookCount()
         }
         return viewModel.getCategroiesCount()
     }
@@ -65,6 +67,7 @@ extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == collectionViewVertical {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: resuseIdentifier, for: indexPath) as! CustomCollectionViewCell
+            cell.configureCell(text: books[indexPath.row].title, price: books[indexPath.row].price)
             return cell
         }
         

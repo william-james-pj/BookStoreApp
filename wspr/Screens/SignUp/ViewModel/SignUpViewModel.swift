@@ -19,6 +19,8 @@ class SignUpViewModel {
     var listModelCity: [ItemModel]?
     var stateSelected: Int?
     var delegate: SignUpViewModelDelegate?
+    fileprivate var stateUseCase: StateUseCase = { return GetStates()}()
+    fileprivate var cityUseCase: CityUseCase = { return GetCity()}()
     
     // MARK: - Init
     init() {
@@ -30,7 +32,7 @@ class SignUpViewModel {
             return
         }
         delegate.showLoading(true)
-        NetworkMoya.getStates { [weak self] result in
+        stateUseCase.getStates { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let response):
@@ -46,7 +48,7 @@ class SignUpViewModel {
             return
         }
         delegate.showLoading(true)
-        NetworkMoya.getCity(stateSelected) { [weak self] result in
+        cityUseCase.getCity(stateSelected) { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let response):

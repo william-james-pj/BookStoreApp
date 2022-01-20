@@ -18,6 +18,9 @@
 		E03967072795AC0300D2B814 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03967062795AC0300D2B814 /* Endpoint.swift */; };
 		E03967092795B11100D2B814 /* StateDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03967082795B11100D2B814 /* StateDTO.swift */; };
 		E039670B2795CA6B00D2B814 /* CityDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E039670A2795CA6B00D2B814 /* CityDTO.swift */; };
+		E054F5162799C54A00C65B3E /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E054F5152799C54A00C65B3E /* BookModel.swift */; };
+		E054F5182799DD0100C65B3E /* StateUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E054F5172799DD0100C65B3E /* StateUseCase.swift */; };
+		E054F51A2799DFA800C65B3E /* CityUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E054F5192799DFA800C65B3E /* CityUseCase.swift */; };
 		E0812A2627984ACB00184FCA /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0812A2527984ACB00184FCA /* SignUpViewModel.swift */; };
 		E0812A3827987C8E00184FCA /* HorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0812A3627987C8E00184FCA /* HorizontalCollectionViewCell.swift */; };
 		E0812A3927987C8E00184FCA /* HorizontalCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0812A3727987C8E00184FCA /* HorizontalCollectionViewCell.xib */; };
@@ -67,6 +70,9 @@
 		E03967062795AC0300D2B814 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		E03967082795B11100D2B814 /* StateDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDTO.swift; sourceTree = "<group>"; };
 		E039670A2795CA6B00D2B814 /* CityDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDTO.swift; sourceTree = "<group>"; };
+		E054F5152799C54A00C65B3E /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
+		E054F5172799DD0100C65B3E /* StateUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateUseCase.swift; sourceTree = "<group>"; };
+		E054F5192799DFA800C65B3E /* CityUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityUseCase.swift; sourceTree = "<group>"; };
 		E0812A2527984ACB00184FCA /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		E0812A3627987C8E00184FCA /* HorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
 		E0812A3727987C8E00184FCA /* HorizontalCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorizontalCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -249,6 +255,8 @@
 		E0812A35279877B900184FCA /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E054F5172799DD0100C65B3E /* StateUseCase.swift */,
+				E054F5192799DFA800C65B3E /* CityUseCase.swift */,
 				E03967042795AB6400D2B814 /* Network.swift */,
 				E02FA4B32797244E00B70E9C /* NetworkMoya.swift */,
 			);
@@ -267,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				E0812A3E27988C9600184FCA /* CategroiesModel.swift */,
+				E054F5152799C54A00C65B3E /* BookModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -471,10 +480,13 @@
 				E0ABEF102791F7CA00575A34 /* CustomCollectionViewCell.swift in Sources */,
 				E0CC0FAB2790AB250014CB61 /* ItemModel.swift in Sources */,
 				E0CC0FA827908B870014CB61 /* CustomTableViewCell.swift in Sources */,
+				E054F5162799C54A00C65B3E /* BookModel.swift in Sources */,
+				E054F51A2799DFA800C65B3E /* CityUseCase.swift in Sources */,
 				E02FA4B22797203300B70E9C /* API.swift in Sources */,
 				E0FCFD96278753AD00628AEB /* ViewController.swift in Sources */,
 				E03967052795AB6400D2B814 /* Network.swift in Sources */,
 				E01A981B278F93B900FBE1B8 /* ListViewController.swift in Sources */,
+				E054F5182799DD0100C65B3E /* StateUseCase.swift in Sources */,
 				E0017F442791EB7000635EF7 /* HomeViewController.swift in Sources */,
 				E0812A3827987C8E00184FCA /* HorizontalCollectionViewCell.swift in Sources */,
 				E0FCFD92278753AD00628AEB /* AppDelegate.swift in Sources */,

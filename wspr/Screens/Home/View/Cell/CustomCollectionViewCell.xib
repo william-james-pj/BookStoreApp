@@ -20,8 +20,13 @@
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="J8M-4o-0JJ">
                         <rect key="frame" x="0.0" y="0.0" width="120" height="166"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="panda" translatesAutoresizingMaskIntoConstraints="NO" id="jGq-2Z-NeI">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book" translatesAutoresizingMaskIntoConstraints="NO" id="jGq-2Z-NeI">
                                 <rect key="frame" x="0.0" y="0.0" width="120" height="121"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ThT-Lo-aPe">
                                 <rect key="frame" x="0.0" y="131" width="120" height="35"/>
@@ -48,7 +53,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="15" id="FNe-6F-tlq"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" systemColor="opaqueSeparatorColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -68,11 +73,15 @@
                 <constraint firstAttribute="trailing" secondItem="J8M-4o-0JJ" secondAttribute="trailing" id="fCz-5A-JHh"/>
             </constraints>
             <size key="customSize" width="120" height="166"/>
+            <connections>
+                <outlet property="labelPrice" destination="4Q3-k2-qgr" id="pwY-Ts-cgG"/>
+                <outlet property="labelTitle" destination="axn-Au-NGQ" id="wtx-eK-JEi"/>
+            </connections>
             <point key="canvasLocation" x="182.60869565217394" y="147.99107142857142"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="panda" width="360" height="335"/>
+        <image name="book" width="270" height="270"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

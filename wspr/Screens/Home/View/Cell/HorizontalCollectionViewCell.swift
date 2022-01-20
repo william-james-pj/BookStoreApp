@@ -14,7 +14,6 @@ class HorizontalCollectionViewCell: UICollectionViewCell {
     // MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     // MARK: - Methods
