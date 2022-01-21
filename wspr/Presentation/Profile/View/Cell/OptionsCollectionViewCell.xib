@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="wspr" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="OptionsCollectionViewCell" customModule="wspr" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="60"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="60"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="V12-Hu-XXi">
+                        <rect key="frame" x="0.0" y="10" width="200" height="40"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3sg-l6-KZ6">
+                                <rect key="frame" x="0.0" y="0.0" width="25" height="40"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fsl-Ax-AFJ">
+                                        <rect key="frame" x="0.0" y="0.5" width="25" height="24"/>
+                                        <color key="tintColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="8Vt-04-dzV"/>
+                                            <constraint firstAttribute="height" constant="25" id="H2B-eC-TKS"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="hoH-lx-7MR">
+                                        <rect key="frame" x="0.0" y="25" width="25" height="15"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="bqp-IT-5ah">
+                                <rect key="frame" x="35" y="0.0" width="165" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preferences" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShI-lf-d3Z">
+                                        <rect key="frame" x="0.0" y="0.0" width="165" height="23.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Theme, Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEJ-sD-3Li">
+                                        <rect key="frame" x="0.0" y="23.5" width="165" height="16.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="V12-Hu-XXi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="CLS-T6-IZE"/>
+                <constraint firstItem="V12-Hu-XXi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="VGs-MK-yGR"/>
+                <constraint firstAttribute="bottom" secondItem="V12-Hu-XXi" secondAttribute="bottom" constant="10" id="gMa-Bx-msB"/>
+                <constraint firstAttribute="trailing" secondItem="V12-Hu-XXi" secondAttribute="trailing" id="hL3-Eh-Z9e"/>
+            </constraints>
+            <size key="customSize" width="200" height="60"/>
+            <connections>
+                <outlet property="imageViewIcon" destination="fsl-Ax-AFJ" id="4Lu-pl-V7Q"/>
+                <outlet property="labelSubTitle" destination="eEJ-sD-3Li" id="P3e-jt-rt3"/>
+                <outlet property="labelTitle" destination="ShI-lf-d3Z" id="UEP-jy-FBp"/>
+            </connections>
+            <point key="canvasLocation" x="240.57971014492756" y="113.16964285714285"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="circle.fill" catalog="system" width="128" height="121"/>
+    </resources>
+</document>

@@ -8,7 +8,7 @@
 import Foundation
 
 class HomeViewModel {
-    // MARK: - Variables
+    // MARK: - Constants
     let categroies: [Category] = [Category(title: "All"), Category(title: "Horror"), Category(title: "Mystery"),
                                   Category(title: "Crime"), Category(title: "Thriller"), Category(title: "Classic")]
     let books: [Book] = [Book(title: "Lord of the Rings", price: 20.90), Book(title: "Alice's Adventures in Wonderland", price: 15.90),

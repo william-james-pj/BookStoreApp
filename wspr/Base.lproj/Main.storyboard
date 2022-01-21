@@ -141,10 +141,10 @@
                                                 <rect key="frame" x="0.0" y="60" width="364" height="25"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4jY-2t-yxk">
-                                                        <rect key="frame" x="0.0" y="0.0" width="279" height="25"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="274" height="25"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPQ-du-WX3">
-                                                                <rect key="frame" x="0.0" y="0.0" width="279" height="25"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="274" height="25"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="Zvh-0X-RXZ"/>
                                                                 </constraints>
@@ -161,7 +161,7 @@
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfN-hO-qWa">
-                                                        <rect key="frame" x="279" y="0.0" width="85" height="25"/>
+                                                        <rect key="frame" x="274" y="0.0" width="90" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="OQ7-ow-z7R"/>
                                                         </constraints>
@@ -403,10 +403,10 @@
                                                 <rect key="frame" x="0.0" y="60" width="364" height="25"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UQV-w3-6Nz">
-                                                        <rect key="frame" x="0.0" y="0.0" width="293.5" height="25"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="289.5" height="25"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFP-K9-g0v">
-                                                                <rect key="frame" x="0.0" y="0.0" width="293.5" height="25"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="289.5" height="25"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="54x-Ti-H7S"/>
                                                                 </constraints>
@@ -423,7 +423,7 @@
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7je-2x-Tq9">
-                                                        <rect key="frame" x="293.5" y="0.0" width="70.5" height="25"/>
+                                                        <rect key="frame" x="289.5" y="0.0" width="74.5" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="4ln-Ut-8Su"/>
                                                         </constraints>
@@ -594,7 +594,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="H2A-Fc-aZe">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="H2A-Fc-aZe">
                                 <rect key="frame" x="25" y="88" width="364" height="725"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ceh-3b-mcz">
@@ -677,9 +677,27 @@
                                             <constraint firstAttribute="height" constant="100" id="A8B-Mp-fT4"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mEw-cq-E7P">
-                                        <rect key="frame" x="0.0" y="100" width="364" height="625"/>
-                                    </stackView>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eyL-2f-KbW">
+                                        <rect key="frame" x="0.0" y="140" width="364" height="585"/>
+                                        <color key="backgroundColor" red="0.1333333333" green="0.15686274510000001" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Rny-ry-q2C">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCellOptions" id="JGP-Kd-76p">
+                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="CHy-jw-sF8">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </collectionViewCellContentView>
+                                                <color key="backgroundColor" red="0.22352941179999999" green="0.24313725489999999" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -694,6 +712,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="B8c-hl-g7e"/>
                     <navigationItem key="navigationItem" id="VOr-mU-vi1"/>
+                    <connections>
+                        <outlet property="collectionViewOptions" destination="eyL-2f-KbW" id="Bbe-Lj-7Ys"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Bc-9t-Ep8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -775,17 +796,17 @@
                                                     <constraint firstAttribute="height" constant="50" id="Bu8-s5-fvt"/>
                                                 </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ID4-SG-A4J">
-                                                    <size key="itemSize" width="128" height="50"/>
+                                                    <size key="itemSize" width="100" height="50"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionCellHorizontal" id="uV8-kH-L9n">
-                                                        <rect key="frame" x="0.0" y="0.0" width="128" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="VqB-77-hXI">
-                                                            <rect key="frame" x="0.0" y="0.0" width="128" height="50"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </collectionViewCellContentView>
                                                         <color key="backgroundColor" red="0.22352941179999999" green="0.24313725489999999" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>

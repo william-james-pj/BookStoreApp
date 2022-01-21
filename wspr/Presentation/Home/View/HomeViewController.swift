@@ -41,7 +41,7 @@ class HomeViewController: UIViewController {
         collectionViewHorizontal.dataSource = self
     }
     
-    let flowLayout: UICollectionViewFlowLayout = {
+    fileprivate let flowLayout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 5
         layout.minimumLineSpacing = 5
@@ -87,6 +87,6 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
             let itemDimension = floor(availableWidth / numberOfItemsPerRow)
             return CGSize(width: itemDimension, height: itemDimension + 40)
         }
-        return CGSize(width: 1, height: 1)
+        return CGSize(width: 100, height: 50)
     }
 }
