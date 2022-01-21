@@ -62,7 +62,7 @@ extension SignUpViewController: SignUpViewModelDelegate {
         }
         
         listVC.listView = listModel
-        
+        listVC.title = listModel[0].type == .typeState ? "States" : "Cities"
         listVC.delegate = self
         self.navigationController?.pushViewController(listVC, animated: true)
     }

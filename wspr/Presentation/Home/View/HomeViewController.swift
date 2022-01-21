@@ -8,26 +8,31 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    // MARK: - Outlet
     @IBOutlet weak var collectionViewVertical: UICollectionView!
     @IBOutlet weak var collectionViewHorizontal: UICollectionView!
     
-    
-    let resuseIdentifier = "CollectionCell"
-    let resuseIdentifierHorizontal = "CollectionCellHorizontal"
+    // MARK: - Variables
     var categories: [Category] = []
     var books: [Book] = []
     fileprivate var viewModel: HomeViewModel = {
         return HomeViewModel()
     }()
     
+    // MARK: - Constantes
+    let resuseIdentifier = "CollectionCell"
+    let resuseIdentifierHorizontal = "CollectionCellHorizontal"
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollection()
         setupData()
     }
     
+    // MARK: - Setup
     fileprivate func setupData() {
-        categories = viewModel.getCategroies()
+        categories = viewModel.getCategories()
         books = viewModel.getBooks()
     }
     
@@ -41,6 +46,7 @@ class HomeViewController: UIViewController {
         collectionViewHorizontal.dataSource = self
     }
     
+    // MARK: - Methods
     fileprivate let flowLayout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 5
@@ -59,9 +65,9 @@ extension HomeViewController: UICollectionViewDelegate {
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if  collectionView == collectionViewVertical {
-            return viewModel.getBookCount()
+            return books.count
         }
-        return viewModel.getCategroiesCount()
+        return categories.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

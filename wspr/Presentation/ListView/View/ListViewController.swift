@@ -12,18 +12,23 @@ protocol ListViewControllerDelegate {
 }
 
 class ListViewController: UIViewController {
+    // MARK: - Outlet
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: - Variables
     var delegate: ListViewControllerDelegate?
-    
-    let cellReuseIdentifier = "CustomTableViewCell"
     var listView : [ItemModel] = []
     
+    // MARK: - Constantes
+    let cellReuseIdentifier = "CustomTableViewCell"
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
     }
     
+    // MARK: - Setup
     fileprivate func setupTableView() {
         tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: cellReuseIdentifier)
         
@@ -31,6 +36,7 @@ class ListViewController: UIViewController {
         tableView.dataSource = self
     }
     
+    // MARK: - Methods
     fileprivate func setList(_ selectedItem: ItemModel) {
         guard let delegate = delegate else {
             return
