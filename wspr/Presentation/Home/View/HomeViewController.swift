@@ -58,7 +58,9 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.row)
+        let seeBookVC = SeeBookViewController()
+        seeBookVC.book = books[indexPath.row]
+        self.present(seeBookVC, animated: true, completion: nil)
     }
 }
 

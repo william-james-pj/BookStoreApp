@@ -10,14 +10,17 @@ import Foundation
 class Book {
     var title: String
     var price: Double
+    var description: String
     
     init() {
         title = ""
         price = 0
+        description = ""
     }
     
-    init(title: String, price: Double) {
+    init(title: String, price: Double, description: String, imageName: String) {
         self.title = title
         self.price = price
+        self.description = description
     }
 }
