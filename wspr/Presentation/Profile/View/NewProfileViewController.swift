@@ -1,13 +1,14 @@
 //
-//  ProfileViewController.swift
+//  NewProfileViewController.swift
 //  wspr
 //
 //  Created by Pinto Junior, William James on 25/01/22.
 //
 
 import UIKit
+import SnapKit
 
-class ProfileViewController: UIViewController {
+class NewProfileViewController: UIViewController {
     // MARK: - Constantes
     let imageSize = 90
     let resuseIdentifier = "collectionCellOptions"
@@ -69,7 +70,7 @@ class ProfileViewController: UIViewController {
         layout.scrollDirection = .vertical
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.backgroundColor = UIColor(red: 0.156, green: 0.184, blue: 0.219, alpha: 1)
+        collectionView.backgroundColor = UIColor(red: 0.133, green: 0.156, blue: 0.192, alpha: 1)
         return collectionView
     }()
     
@@ -118,7 +119,7 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(red: 0.156, green: 0.184, blue: 0.219, alpha: 1)
+        view.backgroundColor = UIColor(red: 0.133, green: 0.156, blue: 0.192, alpha: 1)
         imageProfile.layer.cornerRadius = CGFloat(imageSize / 2)
         setupData()
         setupCollection()
@@ -146,7 +147,7 @@ class ProfileViewController: UIViewController {
     }()
 }
 
-extension ProfileViewController: CodeView {
+extension NewProfileViewController: CodeView {
     func buildHierarchy() {
         view.addSubview(stackBase)
         stackBase.addArrangedSubview(stackHeader())
@@ -167,12 +168,12 @@ extension ProfileViewController: CodeView {
     }
 }
 
-extension ProfileViewController: UICollectionViewDelegate {
+extension NewProfileViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     }
 }
 
-extension ProfileViewController: UICollectionViewDataSource {
+extension NewProfileViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return options.count
     }
@@ -184,7 +185,7 @@ extension ProfileViewController: UICollectionViewDataSource {
     }
 }
 
-extension ProfileViewController: UICollectionViewDelegateFlowLayout {
+extension NewProfileViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.bounds.width
         let numberOfItemsPerRow: CGFloat = 1

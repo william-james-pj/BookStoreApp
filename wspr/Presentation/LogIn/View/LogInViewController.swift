@@ -22,6 +22,12 @@ class LogInViewController: UIViewController {
         textFieldEmail.delegate = self
         textFieldPassword.delegate = self
     }
+    
+    // MARK: - Action
+    @IBAction func buttonLogInPressed(_ sender: Any) {
+        let tabBarHomeVC = TabBarHome()
+        self.navigationController?.pushViewController(tabBarHomeVC, animated: true)
+    }
 }
 
 extension LogInViewController: UITextFieldDelegate {

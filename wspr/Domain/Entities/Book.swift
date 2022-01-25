@@ -18,7 +18,7 @@ class Book {
         description = ""
     }
     
-    init(title: String, price: Double, description: String, imageName: String) {
+    init(title: String, price: Double, description: String) {
         self.title = title
         self.price = price
         self.description = description

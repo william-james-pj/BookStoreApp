@@ -1,13 +1,14 @@
 //
-//  HomeViewController.swift
+//  NewHomeViewController.swift
 //  wspr
 //
 //  Created by Pinto Junior, William James on 25/01/22.
 //
 
 import UIKit
+import SnapKit
 
-class HomeViewController: UIViewController {
+class NewHomeViewController: UIViewController {
     // MARK: - Constantes
     let resuseIdentifier = "CollectionCell"
     let resuseIdentifierHorizontal = "CollectionCellHorizontal"
@@ -22,7 +23,7 @@ class HomeViewController: UIViewController {
     fileprivate var stackBase: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
-        stack.spacing = 25
+        stack.spacing = 30
         stack.distribution = .fill
         stack.translatesAutoresizingMaskIntoConstraints = false
         return stack
@@ -86,7 +87,7 @@ class HomeViewController: UIViewController {
         layout.scrollDirection = .horizontal
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.backgroundColor = UIColor(red: 0.156, green: 0.184, blue: 0.219, alpha: 1)
+        collectionView.backgroundColor = UIColor(red: 0.133, green: 0.156, blue: 0.192, alpha: 1)
         return collectionView
     }()
     
@@ -95,7 +96,7 @@ class HomeViewController: UIViewController {
         layout.scrollDirection = .vertical
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.backgroundColor = UIColor(red: 0.156, green: 0.184, blue: 0.219, alpha: 1)
+        collectionView.backgroundColor = UIColor(red: 0.133, green: 0.156, blue: 0.192, alpha: 1)
         return collectionView
     }()
     
@@ -145,7 +146,7 @@ class HomeViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(red: 0.156, green: 0.184, blue: 0.219, alpha: 1)
+        view.backgroundColor = UIColor(red: 0.133, green: 0.156, blue: 0.192, alpha: 1)
         setupCollection()
         setupData()
         setupView()
@@ -177,7 +178,7 @@ class HomeViewController: UIViewController {
     }()
 }
 
-extension HomeViewController: CodeView {
+extension NewHomeViewController: CodeView {
     func buildHierarchy() {
         view.addSubview(stackBase)
         stackBase.addArrangedSubview(stackTitle())
@@ -195,16 +196,16 @@ extension HomeViewController: CodeView {
         }
         
         buttonSearch.snp.makeConstraints { make in
-            make.height.equalTo(40)
+            make.height.equalTo(35)
         }
         
         horrizontalCollectionView.snp.makeConstraints { make in
-            make.height.equalTo(45)
+            make.height.equalTo(50)
         }
     }
 }
 
-extension HomeViewController: UICollectionViewDelegate {
+extension NewHomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if  collectionView == horrizontalCollectionView {
             return
@@ -216,7 +217,7 @@ extension HomeViewController: UICollectionViewDelegate {
     }
 }
 
-extension HomeViewController: UICollectionViewDataSource {
+extension NewHomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if  collectionView == horrizontalCollectionView {
             return categories.count
@@ -236,10 +237,10 @@ extension HomeViewController: UICollectionViewDataSource {
     }
 }
 
-extension HomeViewController: UICollectionViewDelegateFlowLayout {
+extension NewHomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if  collectionView == horrizontalCollectionView {
-            return CGSize(width: 80, height: 45)
+            return CGSize(width: 100, height: 50)
         }
         let width = collectionView.bounds.width
         let numberOfItemsPerRow: CGFloat = 2

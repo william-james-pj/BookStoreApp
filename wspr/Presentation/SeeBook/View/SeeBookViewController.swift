@@ -87,7 +87,7 @@ class SeeBookViewController: UIViewController {
         button.setTitleColor(.white, for: .normal)
         button.addTarget(self, action: #selector(buttonPurchasePressed), for: .touchDown)
         button.layer.cornerRadius = 5
-        
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -133,20 +133,19 @@ class SeeBookViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor(red: 0.133, green: 0.156, blue: 0.192, alpha: 1)
         setupData()
-        buildHierarchy()
-        buildConstraints()
+        setupView()
     }
     
     // MARK: - Setup
-    
     fileprivate func setupData() {
         labelTitle.text = book?.title
         labelPrice.text = "$\(book?.price ?? 0)"
         labelTextDescription.text = book?.description
     }
-    
-    // MARK: - Methods
-    fileprivate func buildHierarchy() {
+}
+
+extension SeeBookViewController: CodeView {
+    func buildHierarchy() {
         view.addSubview(scrollView)
         scrollView.addSubview(viewBase)
         viewBase.addSubview(stack)
@@ -156,7 +155,7 @@ class SeeBookViewController: UIViewController {
         stack.addArrangedSubview(buttonPurchase)
     }
     
-    fileprivate func buildConstraints() {
+    func buildConstraints() {
         NSLayoutConstraint.activate([
             scrollView.topAnchor.constraint(equalTo: view.topAnchor),
             scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
