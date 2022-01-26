@@ -74,6 +74,7 @@
             </constraints>
             <size key="customSize" width="120" height="166"/>
             <connections>
+                <outlet property="imageBook" destination="jGq-2Z-NeI" id="rL3-D7-rAF"/>
                 <outlet property="labelPrice" destination="4Q3-k2-qgr" id="pwY-Ts-cgG"/>
                 <outlet property="labelTitle" destination="axn-Au-NGQ" id="wtx-eK-JEi"/>
             </connections>

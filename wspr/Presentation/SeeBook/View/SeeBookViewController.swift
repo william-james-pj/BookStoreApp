@@ -33,7 +33,6 @@ class SeeBookViewController: UIViewController {
     
     fileprivate var imageView: UIImageView = {
         let img = UIImageView()
-        img.image = UIImage(named: "book")
         img.layer.cornerRadius = 15
         img.clipsToBounds = true
         return img
@@ -142,6 +141,7 @@ class SeeBookViewController: UIViewController {
         labelTitle.text = book?.title
         labelPrice.text = "$\(book?.price ?? 0)"
         labelTextDescription.text = book?.description
+        imageView.image = book?.image
     }
 }
 

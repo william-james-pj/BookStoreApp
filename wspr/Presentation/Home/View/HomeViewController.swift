@@ -232,7 +232,7 @@ extension HomeViewController: UICollectionViewDataSource {
             return cell
         }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: resuseIdentifier, for: indexPath) as! CustomCollectionViewCell
-        cell.configureCell(text: books[indexPath.row].title, price: books[indexPath.row].price)
+        cell.configureCell(text: books[indexPath.row].title, price: books[indexPath.row].price, image: books[indexPath.row].image)
         return cell
     }
 }
