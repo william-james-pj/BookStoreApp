@@ -43,6 +43,7 @@ class SeeBookViewController: UIViewController {
         let img = UIImageView()
         img.image = UIImage(systemName: "bookmark")
         img.tintColor = .gray
+        img.contentMode = .scaleAspectFill
         return img
     }()
     

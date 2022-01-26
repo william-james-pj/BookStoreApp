@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class ProfileViewController: UIViewController {
     // MARK: - Constantes
@@ -69,7 +70,7 @@ class ProfileViewController: UIViewController {
         layout.scrollDirection = .vertical
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.backgroundColor = UIColor(red: 0.156, green: 0.184, blue: 0.219, alpha: 1)
+        collectionView.backgroundColor = UIColor(red: 0.133, green: 0.156, blue: 0.192, alpha: 1)
         return collectionView
     }()
     
@@ -118,7 +119,7 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(red: 0.156, green: 0.184, blue: 0.219, alpha: 1)
+        view.backgroundColor = UIColor(red: 0.133, green: 0.156, blue: 0.192, alpha: 1)
         imageProfile.layer.cornerRadius = CGFloat(imageSize / 2)
         setupData()
         setupCollection()
