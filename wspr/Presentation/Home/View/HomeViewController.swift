@@ -150,6 +150,8 @@ class HomeViewController: UIViewController {
         setupCollection()
         setupData()
         setupView()
+        
+        UserDefaults.standard.removeObject(forKey: "BookSelected")
     }
     
     // MARK: - Setup
@@ -210,9 +212,8 @@ extension HomeViewController: UICollectionViewDelegate {
         if  collectionView == horrizontalCollectionView {
             return
         }
-        
         let seeBookVC = SeeBookViewController()
-        seeBookVC.book = books[indexPath.row]
+        seeBookVC.bookSelected = books[indexPath.row]
         self.present(seeBookVC, animated: true, completion: nil)
     }
 }
@@ -232,7 +233,7 @@ extension HomeViewController: UICollectionViewDataSource {
             return cell
         }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: resuseIdentifier, for: indexPath) as! CustomCollectionViewCell
-        cell.configureCell(text: books[indexPath.row].title, price: books[indexPath.row].price, image: books[indexPath.row].image)
+        cell.configureCell(text: books[indexPath.row].title, price: books[indexPath.row].price, imageName: books[indexPath.row].imageName)
         return cell
     }
 }

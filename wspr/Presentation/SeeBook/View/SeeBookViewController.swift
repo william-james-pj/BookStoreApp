@@ -9,7 +9,7 @@ import UIKit
 
 class SeeBookViewController: UIViewController {
     // MARK: - Variables
-    var book: Book?
+    var bookSelected: Book?
     
     fileprivate var scrollView: UIScrollView = {
         let scroll = UIScrollView()
@@ -125,6 +125,16 @@ class SeeBookViewController: UIViewController {
     
     // MARK: - Action
     @objc fileprivate func buttonPurchasePressed() {
+        guard let bookSelected = bookSelected else {
+            return
+        }
+
+        do {
+            try UserDefaults.standard.setObject(bookSelected, forKey: "BookSelected")
+        } catch {
+            print(error.localizedDescription)
+        }
+        
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -138,10 +148,13 @@ class SeeBookViewController: UIViewController {
     
     // MARK: - Setup
     fileprivate func setupData() {
-        labelTitle.text = book?.title
-        labelPrice.text = "$\(book?.price ?? 0)"
-        labelTextDescription.text = book?.description
-        imageView.image = book?.image
+        guard let bookSelected = bookSelected else {
+            return
+        }
+        labelTitle.text = bookSelected.title
+        labelPrice.text = "$\(bookSelected.price)"
+        labelTextDescription.text = bookSelected.description
+        imageView.image = UIImage(named: bookSelected.imageName)!
     }
 }
 

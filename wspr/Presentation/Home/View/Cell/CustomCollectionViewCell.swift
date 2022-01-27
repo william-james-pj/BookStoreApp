@@ -19,10 +19,10 @@ class CustomCollectionViewCell: UICollectionViewCell {
     }
     
     // MARK: - Methods
-    func configureCell(text: String, price: Double, image: UIImage) {
+    func configureCell(text: String, price: Double, imageName: String) {
         self.labelTitle.text = text
         self.labelPrice.text = "$\(price)"
-        self.imageBook.image = image
+        self.imageBook.image = UIImage(named: imageName)!
     }
 
 }

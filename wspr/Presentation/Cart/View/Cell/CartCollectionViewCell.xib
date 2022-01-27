@@ -66,6 +66,9 @@
                                         <buttonConfiguration key="configuration" style="plain" image="minus.circle" catalog="system">
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="buttonMinus:" destination="gTV-IL-0wX" eventType="touchUpInside" id="d1U-ij-Wdd"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCs-iJ-J5I">
                                         <rect key="frame" x="0.0" y="30" width="45" height="30"/>
@@ -79,6 +82,9 @@
                                         <buttonConfiguration key="configuration" style="plain" image="plus.circle.fill" catalog="system">
                                             <color key="baseForegroundColor" red="0.99215686270000003" green="0.43921568630000002" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="buttonPlus:" destination="gTV-IL-0wX" eventType="touchUpInside" id="ELq-UG-ojH"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -94,6 +100,12 @@
                 <constraint firstAttribute="trailing" secondItem="hwH-5Z-6EY" secondAttribute="trailing" id="nJS-LP-SEA"/>
             </constraints>
             <size key="customSize" width="339" height="90"/>
+            <connections>
+                <outlet property="imageViewBook" destination="UHC-cI-uC3" id="trV-wO-av3"/>
+                <outlet property="labelBookName" destination="KjZ-tc-J2E" id="Y7c-zS-2jN"/>
+                <outlet property="labelPrice" destination="NAx-iu-wbF" id="Tea-zu-hp0"/>
+                <outlet property="labelQtd" destination="dCs-iJ-J5I" id="YYM-du-JhO"/>
+            </connections>
             <point key="canvasLocation" x="200.72463768115944" y="101.11607142857143"/>
         </collectionViewCell>
     </objects>

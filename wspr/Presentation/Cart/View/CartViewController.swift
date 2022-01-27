@@ -12,6 +12,8 @@ class CartViewController: UIViewController {
     // MARK: - Constantes
     let cartResuseIdentifier = "CartCollectionViewCell"
     
+    var cartList: [Book] = []
+    
     // MARK: - Variables
     fileprivate var stackBase: UIStackView = {
         let stack = UIStackView()
@@ -44,8 +46,26 @@ class CartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(red: 0.133, green: 0.156, blue: 0.192, alpha: 1)
+        
         setupCollection()
         setupView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        do {
+            let bookSelected = try UserDefaults.standard.getObject(forKey: "BookSelected", castTo: Book.self)
+            
+            if let _ = cartList.firstIndex(of: bookSelected) {
+                return
+            }
+            
+            cartList.append(bookSelected)
+            cartCollectionView.reloadData()
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     
     // MARK: - Setup
@@ -80,11 +100,12 @@ extension CartViewController: UICollectionViewDelegate {
 
 extension CartViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return cartList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cartResuseIdentifier, for: indexPath) as! CartCollectionViewCell
+        cell.configureCell(book: cartList[indexPath.row])
         return cell
     }
 }

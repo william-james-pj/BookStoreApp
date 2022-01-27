@@ -10,6 +10,7 @@
 		E0017F402791DF2500635EF7 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0017F3F2791DF2500635EF7 /* LogInViewController.swift */; };
 		E0017F422791DFD900635EF7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0017F412791DFD900635EF7 /* SignUpViewController.swift */; };
 		E01A981B278F93B900FBE1B8 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01A981A278F93B900FBE1B8 /* ListViewController.swift */; };
+		E028914827A34ADF00773C1A /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E028914727A34ADF00773C1A /* UserDefaults+Extensions.swift */; };
 		E02FA4B027971B3800B70E9C /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = E02FA4AF27971B3800B70E9C /* Moya */; };
 		E02FA4B22797203300B70E9C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02FA4B12797203300B70E9C /* API.swift */; };
 		E02FA4B42797244E00B70E9C /* NetworkMoya.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02FA4B32797244E00B70E9C /* NetworkMoya.swift */; };
@@ -40,6 +41,9 @@
 		E0DD0ABF27A082AA00F61D33 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DD0ABE27A082AA00F61D33 /* CartViewController.swift */; };
 		E0E1D1B427A1ADE600F6C5AB /* CartCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E1D1B227A1ADE600F6C5AB /* CartCollectionViewCell.swift */; };
 		E0E1D1B527A1ADE600F6C5AB /* CartCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0E1D1B327A1ADE600F6C5AB /* CartCollectionViewCell.xib */; };
+		E0E1D1B827A1F88400F6C5AB /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = E0E1D1B727A1F88400F6C5AB /* RxCocoa */; };
+		E0E1D1BA27A1F88400F6C5AB /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E0E1D1B927A1F88400F6C5AB /* RxSwift */; };
+		E0E1D1C027A1FD4F00F6C5AB /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E1D1BF27A1FD4F00F6C5AB /* CartViewModel.swift */; };
 		E0E1FDA6279AD6E2003AB780 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E1FDA5279AD6E2003AB780 /* ProfileViewModel.swift */; };
 		E0E1FDA8279AD72D003AB780 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E1FDA7279AD72D003AB780 /* Option.swift */; };
 		E0E1FDAB279B295D003AB780 /* BookUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E1FDAA279B295D003AB780 /* BookUseCase.swift */; };
@@ -77,6 +81,7 @@
 		E0017F3F2791DF2500635EF7 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		E0017F412791DFD900635EF7 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		E01A981A278F93B900FBE1B8 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		E028914727A34ADF00773C1A /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
 		E02FA4B12797203300B70E9C /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		E02FA4B32797244E00B70E9C /* NetworkMoya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMoya.swift; sourceTree = "<group>"; };
 		E03967042795AB6400D2B814 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -105,6 +110,7 @@
 		E0DD0ABE27A082AA00F61D33 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		E0E1D1B227A1ADE600F6C5AB /* CartCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCollectionViewCell.swift; sourceTree = "<group>"; };
 		E0E1D1B327A1ADE600F6C5AB /* CartCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartCollectionViewCell.xib; sourceTree = "<group>"; };
+		E0E1D1BF27A1FD4F00F6C5AB /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
 		E0E1FDA5279AD6E2003AB780 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		E0E1FDA7279AD72D003AB780 /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
 		E0E1FDAA279B295D003AB780 /* BookUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookUseCase.swift; sourceTree = "<group>"; };
@@ -130,7 +136,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0E1D1B827A1F88400F6C5AB /* RxCocoa in Frameworks */,
 				E02FA4B027971B3800B70E9C /* Moya in Frameworks */,
+				E0E1D1BA27A1F88400F6C5AB /* RxSwift in Frameworks */,
 				E0DD0AA727A02B2100F61D33 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +303,7 @@
 			children = (
 				E0DD0AA327A0288300F61D33 /* CodeView.swift */,
 				E0DD0AB627A049EF00F61D33 /* UiView+Extensions.swift */,
+				E028914727A34ADF00773C1A /* UserDefaults+Extensions.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -310,6 +319,7 @@
 		E0DD0ABC27A0827900F61D33 /* Cart */ = {
 			isa = PBXGroup;
 			children = (
+				E0E1D1BE27A1FD3B00F6C5AB /* ViewModel */,
 				E0DD0ABD27A0829000F61D33 /* View */,
 			);
 			path = Cart;
@@ -331,6 +341,14 @@
 				E0E1D1B327A1ADE600F6C5AB /* CartCollectionViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		E0E1D1BE27A1FD3B00F6C5AB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E0E1D1BF27A1FD4F00F6C5AB /* CartViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		E0E1FDA4279AD6A8003AB780 /* ViewModel */ = {
@@ -498,6 +516,8 @@
 			packageProductDependencies = (
 				E02FA4AF27971B3800B70E9C /* Moya */,
 				E0DD0AA627A02B2100F61D33 /* SnapKit */,
+				E0E1D1B727A1F88400F6C5AB /* RxCocoa */,
+				E0E1D1B927A1F88400F6C5AB /* RxSwift */,
 			);
 			productName = wspr;
 			productReference = E0FCFD8E278753AD00628AEB /* wspr.app */;
@@ -574,6 +594,7 @@
 			packageReferences = (
 				E02FA4AE27971B3700B70E9C /* XCRemoteSwiftPackageReference "Moya" */,
 				E0DD0AA527A02B2100F61D33 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				E0E1D1B627A1F88400F6C5AB /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = E0FCFD8F278753AD00628AEB /* Products */;
 			projectDirPath = "";
@@ -643,10 +664,12 @@
 				E03967052795AB6400D2B814 /* Network.swift in Sources */,
 				E01A981B278F93B900FBE1B8 /* ListViewController.swift in Sources */,
 				E054F5182799DD0100C65B3E /* StateUseCase.swift in Sources */,
+				E028914827A34ADF00773C1A /* UserDefaults+Extensions.swift in Sources */,
 				E0812A3827987C8E00184FCA /* HorizontalCollectionViewCell.swift in Sources */,
 				E0E76F4D279A209700E480D8 /* OptionsCollectionViewCell.swift in Sources */,
 				E0FCFD92278753AD00628AEB /* AppDelegate.swift in Sources */,
 				E0FCFD94278753AD00628AEB /* SceneDelegate.swift in Sources */,
+				E0E1D1C027A1FD4F00F6C5AB /* CartViewModel.swift in Sources */,
 				E0E1FDAF279B2A33003AB780 /* CategoriesUseCase.swift in Sources */,
 				E039670B2795CA6B00D2B814 /* City.swift in Sources */,
 				E0DD0AB727A049EF00F61D33 /* UiView+Extensions.swift in Sources */,
@@ -1020,6 +1043,14 @@
 				minimumVersion = 5.0.1;
 			};
 		};
+		E0E1D1B627A1F88400F6C5AB /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1032,6 +1063,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E0DD0AA527A02B2100F61D33 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		E0E1D1B727A1F88400F6C5AB /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E0E1D1B627A1F88400F6C5AB /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		E0E1D1B927A1F88400F6C5AB /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E0E1D1B627A1F88400F6C5AB /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
