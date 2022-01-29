@@ -14,9 +14,6 @@ class CartCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageViewBook: UIImageView!
     @IBOutlet weak var labelQtd: UILabel!
     
-    // MARK: - Variable
-    var bookCell: Book?
-    
     // MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -46,6 +43,5 @@ class CartCollectionViewCell: UICollectionViewCell {
         self.labelBookName.text = book.title
         self.labelPrice.text = "$\(book.price)"
         self.imageViewBook.image = UIImage(named: book.imageName)!
-        self.bookCell = book
     }
 }

@@ -12,7 +12,11 @@ class CartViewController: UIViewController {
     // MARK: - Constantes
     let cartResuseIdentifier = "CartCollectionViewCell"
     
+    // MARK: - Variables
     var cartList: [Book] = []
+    fileprivate var viewModel: CartViewModel = {
+        return CartViewModel()
+    }()
     
     // MARK: - Variables
     fileprivate var stackBase: UIStackView = {
@@ -33,6 +37,41 @@ class CartViewController: UIViewController {
         return label
     }()
     
+    fileprivate var labelTotal: UILabel = {
+        let label = UILabel()
+        label.text = "Total:"
+        label.font = .systemFont(ofSize: 18)
+        label.textColor = .white
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    fileprivate var labelPrice: UILabel = {
+        let label = UILabel()
+        label.text = "$0.0"
+        label.font = .boldSystemFont(ofSize: 20)
+        label.textColor = UIColor(red: 0.992, green: 0.439, blue: 0.078, alpha: 1)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    fileprivate var buttonPay: UIButton = {
+        let button = UIButton()
+        button.setTitle("Payment", for: .normal)
+        button.backgroundColor = UIColor(red: 0.223, green: 0.243, blue: 0.274, alpha: 1)
+        button.setTitleColor(.white, for: .normal)
+        button.layer.cornerRadius = 5
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        button.tintColor = UIColor(red: 0.992, green: 0.439, blue: 0.078, alpha: 1)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    fileprivate var viewLowPriority: UIView = {
+        let view = UIView()
+        return view
+    }()
+    
     fileprivate var cartCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -41,6 +80,16 @@ class CartViewController: UIViewController {
         collectionView.backgroundColor = UIColor(red: 0.133, green: 0.156, blue: 0.192, alpha: 1)
         return collectionView
     }()
+    
+    fileprivate func stackPrice() -> UIStackView {
+        let stack = UIStackView()
+        stack.axis = .horizontal
+        stack.spacing = 15
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        stack.addArrangedSubview(labelTotal)
+        stack.addArrangedSubview(labelPrice)
+        return stack
+    }
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -57,12 +106,9 @@ class CartViewController: UIViewController {
         do {
             let bookSelected = try UserDefaults.standard.getObject(forKey: "BookSelected", castTo: Book.self)
             
-            if let _ = cartList.firstIndex(of: bookSelected) {
-                return
-            }
+            viewModel.addNewBookSelected(bookSelected)
+            reloadData()
             
-            cartList.append(bookSelected)
-            cartCollectionView.reloadData()
         } catch {
             print(error.localizedDescription)
         }
@@ -74,6 +120,13 @@ class CartViewController: UIViewController {
         cartCollectionView.delegate = self
         cartCollectionView.register(UINib(nibName: cartResuseIdentifier, bundle: nil), forCellWithReuseIdentifier: cartResuseIdentifier)
     }
+    
+    // MARK: - Methods
+    func reloadData() {
+        cartList = viewModel.getBooksSelected()
+        labelPrice.text = viewModel.getTotalPrice()
+        cartCollectionView.reloadData()
+    }
 }
 
 extension CartViewController: CodeView {
@@ -81,13 +134,19 @@ extension CartViewController: CodeView {
         view.addSubview(stackBase)
         stackBase.addArrangedSubview(labelTitle)
         stackBase.addArrangedSubview(cartCollectionView)
+        stackBase.addArrangedSubview(stackPrice())
+        stackBase.addArrangedSubview(buttonPay)
     }
     
     func buildConstraints() {
         stackBase.snp.makeConstraints { make in
             make.top.equalTo(view.safeArea.top)
-            make.bottom.equalTo(view.safeArea.bottom)
+            make.bottom.equalTo(view.safeArea.bottom).inset(30)
             make.leading.trailing.equalToSuperview().inset(25)
+        }
+        
+        buttonPay.snp.makeConstraints { make in
+            make.height.equalTo(40)
         }
     }
 }
