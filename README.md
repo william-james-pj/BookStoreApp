@@ -30,3 +30,9 @@ Projeto elaborado durante o treinamento de iOS.
 O projeto foi construído utilizando:
 
 - [Swift](https://www.swift.org/)
+
+## Contato
+
+William James - william.james.pj@gmail.com
+
+Link do projeto: [https://github.com/william-james-pj/BookStoreApp](https://github.com/william-james-pj/BookStoreApp)
