@@ -23,8 +23,6 @@
 
 ![screenshot](.github/cover.jpg)
 
-Projeto elaborado durante o treinamento de iOS.
-
 ### Construído com
 
 O projeto foi construído utilizando:
